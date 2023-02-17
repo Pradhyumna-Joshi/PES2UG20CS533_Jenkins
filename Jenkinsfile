@@ -4,19 +4,18 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'g++ working.cpp -o working'
+        sh 'g++ Calculator.cpp -o Calculator'
       }
     }
    
     stage('Test') {
       steps {
-        sh './working'
+        sh './Calculator'
       }
     }
    
     stage('Deploy') {
       steps {
-        sh '/departent/services'
       }
     }
   }
